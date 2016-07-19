@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="engine4">
+        <item>济南</item>
+        <item>胶州</item>
+        <item>青岛</item>
+        <item>淄博</item>
+        <item>枣庄</item>
+        <item>东营</item>
+        <item>烟台</item>
+        <item>潍坊</item>
+        <item>济宁</item>
+        <item>泰安</item>
+        <item>威海</item>
+        <item>日照</item>
+        <item>滨州</item>
+        <item>德州</item>
+        <item>聊城</item>
+        <item>临沂</item>
+        <item>菏泽</item>
+        <item>莱芜</item>
+        <item>乳山</item>
+        <item>广州</item>
+        <item>肇庆</item>
+        <item>中山</item>
+
+    </string-array>
+</resources>

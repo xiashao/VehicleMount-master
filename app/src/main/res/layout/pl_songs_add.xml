@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:Android="http://schemas.android.com/apk/res/android"
+    Android:layout_width="fill_parent"
+    Android:layout_height="fill_parent"
+    Android:orientation="horizontal"
+    Android:background="#FAFAFA">
+
+    <!-- 专辑图片 -->
+
+    <ImageView
+        Android:id="@+id/albumPicture"
+        Android:layout_width="75dp"
+        Android:layout_height="75dp"
+        Android:layout_marginLeft="18dp"
+        Android:layout_marginTop="18dp"
+        Android:background="@mipmap/audioplayernoartwork" />
+
+        <!-- 图标图片 -->
+
+    <ImageView
+        Android:id="@+id/icon"
+        Android:layout_width="24dp"
+        Android:layout_height="24dp"
+        Android:layout_alignParentRight="true"
+        Android:layout_centerVertical="true"
+        Android:layout_marginRight="10dp"
+        Android:layout_marginLeft="6dp"
+        Android:layout_gravity="center" />
+    
+    <!-- 商品信息 -->
+
+    <LinearLayout
+        Android:layout_width="360dp"
+        Android:layout_height="110dp"
+        Android:layout_alignParentTop="true"
+        Android:layout_toRightOf="@id/albumPicture"
+        Android:layout_toLeftOf="@id/icon"
+        Android:layout_marginLeft="12dp"
+        Android:orientation="vertical" >
+        <TextView
+            Android:id="@+id/songName"
+            Android:layout_width="wrap_content"
+            Android:layout_height="wrap_content"
+            Android:layout_marginTop="9dp"
+            Android:text="曾经的你"
+            Android:singleLine="true"
+            Android:ellipsize="end"
+            Android:textColor="#333333"
+            Android:textSize="30sp" />
+        <LinearLayout
+            Android:layout_width="wrap_content"
+            Android:layout_height="wrap_content"
+            Android:orientation="horizontal">
+            <TextView
+            Android:id="@+id/singerName"
+            Android:layout_width="wrap_content"
+            Android:layout_height="wrap_content"
+            Android:layout_marginTop="14dp"
+            Android:text="许巍"
+            Android:textColor="#999999"
+            Android:textSize="15sp"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <!--
+         购买和商品详情  
+    <LinearLayout Android:gravity="right"  
+    Android:orientation="horizontal" 
+    Android:layout_width="fill_parent"  
+    Android:layout_height="wrap_content">  
+    <CheckBox Android:id="@+id/checkItem"    
+        Android:layout_width="wrap_content"  
+        Android:layout_height="wrap_content"    
+        Android:layout_margin="5px"/>  
+    <Button  Android:id="@+id/detailItem"    
+        Android:layout_width="wrap_content"  
+        Android:layout_height="wrap_content"    
+        Android:layout_margin="5px"/>  
+    </LinearLayout>
+    -->
+
+</RelativeLayout>

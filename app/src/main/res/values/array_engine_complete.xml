@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="engine_complete">
+        <item>开封</item>
+        <item>洛阳</item>
+        <item>驻马店</item>
+        <item>信阳</item>
+        <item>平湖</item>
+        <item>海宁</item>
+        <item>桐乡</item>
+        <item>宝鸡</item>
+        <item>铜川</item>
+        <item>咸阳</item>
+        <item>渭南</item>
+        <item>汉中</item>
+        <item>安康</item>
+        <item>商洛</item>
+        <item>延安</item>
+        <item>榆林</item>
+        <item>呼和浩特</item>
+        <item>包头</item>
+        <item>乌海</item>
+        <item>上海</item>
+        <item>丹东</item>
+        <item>阜新</item>
+    </string-array>
+</resources>

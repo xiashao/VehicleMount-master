@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_theme_bg">
+    <include android:id="@+id/title_bar"
+        layout="@layout/include_title_view"/>
+    <!-- 查询表单 -->
+    <LinearLayout
+        android:id="@+id/cx_form"
+        android:layout_below="@id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_bg"
+        android:orientation="vertical"
+        android:layout_margin="12dp" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/item_bg"
+            android:id="@+id/btn_cpsz">
+            <TextView
+                style="@style/csy_row_label"
+                android:text="@string/csy_cxdz_lab"
+                android:id="@+id/text1"/>
+            <TextView
+                style="@style/csy_row_label"
+                android:text="@string/csy_cxdz_tip"
+                android:id="@+id/cx_city"
+                android:layout_toRightOf="@+id/text1"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_right"/>
+        </RelativeLayout>
+        <include layout="@layout/view_line_gray"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/csy_row_label"
+                android:text="@string/csy_chepai_lab"
+                android:id="@+id/text2"/>
+            <LinearLayout
+                android:layout_width="@dimen/csy_item_h"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/csy_select"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/text2"
+                android:id="@+id/linearLayout1">
+                <TextView
+                    android:id="@+id/chepai_sz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/csy_pd"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/csy_text"
+                    android:text="22"
+                    android:textSize="@dimen/csy_text_ts" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:src="@mipmap/csy_arr_drop" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/chepai_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/linearLayout1"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="@string/csy_chepai_tip"
+                android:inputType="textUri"
+                android:paddingLeft="10dp"
+                android:maxLength="6" />
+        </RelativeLayout>
+        <include layout="@layout/view_line_gray"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/row_chejia">
+            <TextView
+                style="@style/csy_row_label"
+                android:text="@string/csy_chejia_lab"
+                android:id="@+id/text3"/>
+            <EditText
+                android:id="@+id/chejia_number"
+                style="@style/csy_textbox1"
+                android:layout_toRightOf="@+id/text3"
+                android:layout_toLeftOf="@+id/ico_chejia"
+                android:hint=""/>
+            <ImageView
+                android:id="@+id/ico_chejia"
+                style="@style/csy_row_icon"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/csy_ico_help" />
+        </RelativeLayout>
+        <include layout="@layout/view_line_gray"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/row_engine">
+            <TextView
+                style="@style/csy_row_label"
+                android:text="@string/csy_engine_lab"
+                android:id="@+id/text4"/>
+            <EditText
+                android:layout_toRightOf="@+id/text4"
+                android:id="@+id/engine_number"
+                style="@style/csy_textbox1"
+                android:layout_toLeftOf="@+id/ico_engine"/>
+            <ImageView
+                android:id="@+id/ico_engine"
+                style="@style/csy_row_icon"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/csy_ico_help" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 按钮 -->
+    <LinearLayout
+        android:layout_below="@id/cx_form"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+
+        <Button
+            android:id="@+id/btn_query"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/csy_btn_h"
+            android:layout_marginBottom="@dimen/csy_pd"
+            android:background="@drawable/red_button_bg"
+            android:gravity="center"
+            android:text="@string/csy_btn_query"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/csy_text_ts" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/csy_form_tip"
+            android:textColor="@color/csy_label"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <!-- 行驶证图示 -->
+    <FrameLayout
+        android:id="@+id/popXSZ"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="@dimen/csy_pd"
+        android:paddingRight="@dimen/csy_pd"
+        android:background="#7f000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/csy_label_w"
+            android:src="@mipmap/csy_img_xsz" />
+
+        <Button
+            android:id="@+id/btn_closeXSZ"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/csy_btn_h"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/csy_pd"
+            android:background="@drawable/csy_btn_light"
+            android:gravity="center"
+            android:text="@string/csy_close"
+            android:textColor="@color/csy_text"
+            android:textSize="@dimen/csy_text_ts" />
+    </FrameLayout>
+
+</RelativeLayout>

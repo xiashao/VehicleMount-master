@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="frame_complete">
+        <item>郑州</item>
+        <item>开封</item>
+        <item>新乡</item>
+        <item>三门峡</item>
+        <item>周口</item>
+        <item>驻马店</item>
+        <item>信阳</item>
+        <item>济源</item>
+        <item>济南</item>
+        <item>潍坊</item>
+        <item>寿光</item>
+        <item>苏州</item>
+        <item>青海全省</item>
+        <item>西宁</item>
+        <item>海北</item>
+        <item>绍兴</item>
+        <item>嘉兴</item>
+        <item>诸暨</item>
+        <item>平湖</item>
+        <item>上虞</item>
+        <item>海宁</item>
+        <item>绍兴县</item>
+        <item>桐乡</item>
+        <item>宝鸡</item>
+        <item>铜川</item>
+        <item>咸阳</item>
+        <item>渭南</item>
+        <item>汉中</item>
+        <item>安康</item>
+        <item>商洛</item>
+        <item>延安</item>
+        <item>榆林</item>
+        <item>兰州</item>
+        <item>嘉峪关</item>
+        <item>金昌</item>
+        <item>白银</item>
+        <item>天水</item>
+        <item>酒泉</item>
+        <item>张掖</item>
+        <item>威武</item>
+        <item>定西</item>
+        <item>陇南</item>
+        <item>平凉</item>
+        <item>庆阳</item>
+        <item>临夏</item>
+        <item>哈尔滨</item>
+        <item>齐齐哈尔</item>
+        <item>牡丹江</item>
+        <item>佳木斯</item>
+        <item>大庆</item>
+        <item>伊春</item>
+        <item>鸡西</item>
+        <item>鹤岗</item>
+        <item>双鸭山</item>
+        <item>七台河</item>
+        <item>绥化</item>
+        <item>黑河</item>
+        <item>大兴安岭</item>
+
+    </string-array>
+</resources>

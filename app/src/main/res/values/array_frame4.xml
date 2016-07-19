@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="frame4">
+        <item>文登</item>
+        <item>胶州</item>
+        <item>镇江</item>
+        <item>新疆全省</item>
+        <item>洋浦</item>
+        <item>三沙</item>
+        <item>东方</item>
+        <item>定安县</item>
+        <item>昌江</item>
+        <item>临高县</item>
+        <item>保亭</item>
+        <item>屯昌县</item>
+        <item>澄迈县</item>
+        <item>白沙</item>
+        <item>万宁</item>
+        <item>乐东</item>
+        <item>儋州</item>
+        <item>文昌</item>
+        <item>琼中</item>
+        <item>陵水</item>
+        <item>昌吉</item>
+        <item>博尔塔拉</item>
+        <item>伊犁</item>
+        <item>塔城</item>
+        <item>阿勒泰</item>
+        <item>吐鲁番</item>
+        <item>巴音郭楞</item>
+        <item>阿克苏</item>
+        <item>克孜勒苏</item>
+        <item>喀什</item>
+        <item>和田</item>
+        <item>哈密</item>
+        <item>福建全省</item>
+        <item>莆田</item>
+        <item>泉州</item>
+        <item>漳州</item>
+        <item>龙岩</item>
+        <item>三明</item>
+        <item>南平</item>
+        <item>宁德</item>
+        <item>楚雄</item>
+        <item>石家庄</item>
+        <item>唐山</item>
+        <item>秦皇岛</item>
+        <item>邯郸</item>
+        <item>邢台</item>
+        <item>保定</item>
+        <item>张家口</item>
+        <item>承德</item>
+        <item>沧州</item>
+        <item>廊坊</item>
+        <item>衡水</item>
+        <item>长春</item>
+        <item>吉林</item>
+        <item>四平</item>
+        <item>辽源</item>
+        <item>通化</item>
+        <item>白山</item>
+        <item>白城</item>
+        <item>延边</item>
+        <item>松原</item>
+        <item>银川</item>
+
+    </string-array>
+
+</resources>

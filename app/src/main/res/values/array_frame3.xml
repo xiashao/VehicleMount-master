@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="frame3">
+        <item>义乌</item>
+        <item>永康</item>
+    </string-array>
+</resources>
