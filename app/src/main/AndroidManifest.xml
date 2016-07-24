@@ -71,6 +71,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.DrivingActivity"
+
+        ></activity>
         <activity
             android:name=".ui.MusicMainActivity"
             android:theme="@style/AppTheme.NoActionBar"

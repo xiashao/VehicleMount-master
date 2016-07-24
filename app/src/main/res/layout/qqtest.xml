@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout3"
+        >
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="250dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_songName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:textSize="25sp"
+                    android:text="曾经的你"/>
+                <TextView
+                    android:id="@+id/tv_singerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="许巍"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_control"
+                android:layout_width="match_parent"
+                android:layout_height="143dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/LastImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/music_previous_bg" />
+                <Button
+                    android:id="@+id/PauseImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/music_pause_bg" />
+                <Button
+                    android:id="@+id/NextImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/music_next_bg" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/rl_control"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_curcentTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="00:00" />
+
+                <SeekBar
+                    android:id="@+id/seekBar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/Widget.SeekBar.Normal"/>
+
+                <TextView
+                    android:id="@+id/tv_allTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="00:00" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="400dp"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/linearLayout3"
+            android:layout_toStartOf="@+id/linearLayout3"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.baidu.mapapi.map.MapView
+                    android:id="@+id/bmapView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/map_search_bg"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp">
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:id="@+id/search"
+                        android:gravity="center"
+                        android:hint="请输入地点"/>
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/mac_start_icon"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone"
+                    android:id="@+id/mac"/>
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+

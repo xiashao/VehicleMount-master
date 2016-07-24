@@ -1,15 +1,10 @@
 package car.ccut.com.vehicle.ui;
 
-import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.graphics.BitmapFactory;
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.text.Editable;
@@ -49,7 +44,6 @@ import com.baidu.mapapi.search.poi.PoiDetailResult;
 import com.baidu.mapapi.search.poi.PoiNearbySearchOption;
 import com.baidu.mapapi.search.poi.PoiResult;
 import com.baidu.mapapi.search.poi.PoiSearch;
-import com.google.gson.annotations.Until;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -59,16 +53,12 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import car.ccut.com.vehicle.R;
-import car.ccut.com.vehicle.base.AppManager;
 import car.ccut.com.vehicle.base.BaseActivity;
-import car.ccut.com.vehicle.bean.Mp3;
 import car.ccut.com.vehicle.bean.PoiInfos;
 import car.ccut.com.vehicle.bean.Refuel.RefuelStationInfo;
 import car.ccut.com.vehicle.listener.MyOrientationListener;
 import car.ccut.com.vehicle.service.MusicService;
 import car.ccut.com.vehicle.service.VoiceRecognition;
-import car.ccut.com.vehicle.util.MusicUtils;
-import car.ccut.com.vehicle.util.Utils;
 
 /**
  * Created by panzhuowen on 2016/3/12.
@@ -484,6 +474,8 @@ public class MapActivity extends BaseActivity{
             public void onClick(View view) {
                     dialog.dismiss();
                     macButton.setVisibility(View.VISIBLE);
+                it = new Intent(MapActivity.this,DrivingActivity.class);
+                startActivity(it);
             }
         });
         carManage = (LinearLayout) view.findViewById(R.id.car_manage);
