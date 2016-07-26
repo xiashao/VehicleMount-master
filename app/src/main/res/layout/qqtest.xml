@@ -1,70 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="horizontal"
+    android:background="#000"
 
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:layout_margin="10dp"
+
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:background="@drawable/corners_bg"
+           >
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/bmapView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:background="@drawable/map_search_bg"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:id="@+id/search"
+                    android:gravity="center"
+                    android:hint="请输入地点"/>
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mac_start_icon"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                android:id="@+id/mac"/>
+        </FrameLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_weight="20"
         android:id="@+id/linearLayout3"
+        android:orientation="vertical"
         >
         <RelativeLayout
-            android:layout_width="280dp"
-            android:layout_height="250dp"
-            >
-
+            android:layout_width="wrap_content"
+            android:layout_height="236dp"
+            android:layout_weight="10"
+            android:layout_margin="10dp"
+            android:background="@drawable/corners_bg">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                >
+                android:id="@+id/linearLayout5">
 
-                <TextView
-                    android:id="@+id/tv_songName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:ellipsize="marquee"
-                    android:textSize="25sp"
-                    android:text="曾经的你"/>
-                <TextView
-                    android:id="@+id/tv_singerName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text="许巍"/>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/rl_control"
                 android:layout_width="match_parent"
-                android:layout_height="143dp"
+                android:layout_height="70dp"
                 android:layout_alignParentBottom="true"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
 
                 <Button
                     android:id="@+id/LastImageButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:background="@drawable/music_previous_bg" />
                 <Button
                     android:id="@+id/PauseImageButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:layout_centerInParent="true"
                     android:background="@drawable/music_pause_bg" />
                 <Button
                     android:id="@+id/NextImageButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
                     android:background="@drawable/music_next_bg" />
             </LinearLayout>
@@ -73,77 +107,54 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@id/rl_control"
                 android:layout_marginBottom="10dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout4">
 
-                <TextView
-                    android:id="@+id/tv_curcentTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:text="00:00" />
-
-                <SeekBar
-                    android:id="@+id/seekBar1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    style="@style/Widget.SeekBar.Normal"/>
-
-                <TextView
-                    android:id="@+id/tv_allTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:text="00:00" />
             </LinearLayout>
 
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_singerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#fff"
+                android:text="许巍"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
 
-    </LinearLayout>
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:orientation="vertical"
-            android:layout_width="400dp"
-            android:layout_height="fill_parent"
-            android:layout_toLeftOf="@+id/linearLayout3"
-            android:layout_toStartOf="@+id/linearLayout3"
-            >
-            <FrameLayout
+            <SeekBar
+                android:id="@+id/seekBar1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <com.baidu.mapapi.map.MapView
-                    android:id="@+id/bmapView"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"/>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="38dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/map_search_bg"
-                    android:layout_marginLeft="15dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp">
-                    <AutoCompleteTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@null"
-                        android:id="@+id/search"
-                        android:gravity="center"
-                        android:hint="请输入地点"/>
-                </RelativeLayout>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/mac_start_icon"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginBottom="20dp"
-                    android:visibility="gone"
-                    android:id="@+id/mac"/>
-            </FrameLayout>
-        </LinearLayout>
-    </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/Widget.SeekBar.Normal"
+                android:layout_above="@+id/tv_singerName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="25dp" />
+
+            <TextView
+                android:id="@+id/tv_songName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textSize="15dp"
+                android:textColor="#fff"
+                android:text="曾经的你"
+                android:layout_alignTop="@+id/linearLayout5"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="115dp"
+    android:background="@drawable/corners_bg"
+    android:layout_margin="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="121212" android:layout_weight="1"/>
+</RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
 

@@ -7,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/drag_layout">
+        android:id="@+id/drag_layout"
+       >
         <FrameLayout
             android:id="@+id/first"
             android:layout_width="fill_parent"

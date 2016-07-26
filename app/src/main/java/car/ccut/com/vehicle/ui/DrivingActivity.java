@@ -20,7 +20,7 @@ import car.ccut.com.vehicle.util.MusicUtils;
 
 public class DrivingActivity extends Activity implements OnClickListener {
     private Button mFrontImageButton, mPauseImageButton, mNextImageButton;
-    private TextView tv_songName, tv_singerName, tv_curcentTime, tv_allTime;
+    private TextView tv_songName, tv_singerName;
     private SeekBar seekBar1;// 播放进度条
     private MusicService mService;
     final int RIGHT = 0;
@@ -78,8 +78,6 @@ public class DrivingActivity extends Activity implements OnClickListener {
         mNextImageButton = (Button) findViewById(R.id.NextImageButton);
         tv_songName = (TextView) findViewById(R.id.tv_songName);
         tv_singerName = (TextView) findViewById(R.id.tv_singerName);
-        tv_curcentTime = (TextView) findViewById(R.id.tv_curcentTime);
-        tv_allTime = (TextView) findViewById(R.id.tv_allTime);
         seekBar1 = (SeekBar) findViewById(R.id.seekBar1);
         // 启动
         handler.post(updateThread);
@@ -95,8 +93,6 @@ public class DrivingActivity extends Activity implements OnClickListener {
 
             tv_songName.setText(mService.getSongName());
             tv_singerName.setText(mService.getSingerName());
-            tv_curcentTime.setText(formatTime(mService.getCurrent()));
-            tv_allTime.setText(formatTime(mService.getDuration()));
             // 每次延迟100毫秒再启动线程
             handler.postDelayed(updateThread, 100);
         }

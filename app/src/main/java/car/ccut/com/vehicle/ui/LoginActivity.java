@@ -32,7 +32,9 @@ import car.ccut.com.vehicle.bean.car.CarInfo;
 import car.ccut.com.vehicle.bean.net.AjaxResponse;
 import car.ccut.com.vehicle.interf.ConstantValue;
 import car.ccut.com.vehicle.network.JsonRequestWithAuth;
+import car.ccut.com.vehicle.service.MusicService;
 import car.ccut.com.vehicle.util.MD5;
+import car.ccut.com.vehicle.util.MusicUtils;
 import cn.jpush.android.api.JPushInterface;
 import cn.jpush.android.api.TagAliasCallback;
 
@@ -65,11 +67,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Intent it;
     public DelayedProgressDialog dialog;
     private User user;
-
+    private MusicService mService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        MyApplication application = (MyApplication) getApplication();
         ButterKnife.bind(this);
         Intent i=getIntent();
         String phString=i.getStringExtra("phone");

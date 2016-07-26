@@ -129,7 +129,7 @@ public class MyApplication extends Application {
             List<Mp3> songs = MusicUtils.getAllSongs(getApplicationContext());
             if (songs!=null){
                 mService.setSongs(songs);
-                mService.playMusic(songs.get(0).getUrl());
+              /*  mService.playMusic(songs.get(0).getUrl());*/
             }
 
         }
